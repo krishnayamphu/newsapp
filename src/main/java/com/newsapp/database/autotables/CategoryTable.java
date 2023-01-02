@@ -22,7 +22,7 @@ public class CategoryTable {
     public static void drop() {
         try {
             Connection cn = ConnectDB.connect();
-            String sql = "DROP TABLE category;";
+            String sql = "DROP TABLE category";
             PreparedStatement ps = cn.prepareStatement(sql);
             ps.executeUpdate();
             System.out.println("Category Table Deleted");
