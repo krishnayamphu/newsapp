@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@include file="../include/head.jsp"%>
     <title>Create Post</title>
 </head>
 <body>
@@ -17,9 +18,42 @@
         </c:forEach>
     </select>
     <label>Post Image</label>
-    <input type="text" name="image">
-    <button type="button">Set Image</button>
+    <input type="text" name="image" id="image">
+    <button type="button" onclick="mediaOpen()">Set Image</button>
     <button>Create</button>
+
+    <h3>All Media Files</h3>
+    <div id="mediaOverlay" class="media-overlay">
+        <div class="media-container">
+            <button class="btn-close" type="button" onclick="mediaClose()"> X </button>
+            <c:forEach var="file" items="${files}">
+                <div class="media">
+                    <img onclick="setImage('${file}')" src="uploads/${file}" alt="">
+                    <div class="media-action">
+                        <a href="">View</a>
+                        <form action="media-del" method="post">
+                            <input type="hidden" name="image" value="${file}">
+                            <button>Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
 </form>
+
+<script>
+    function mediaOpen(){
+        document.getElementById("mediaOverlay").style.display="flex";
+    }
+    function mediaClose(){
+        document.getElementById("mediaOverlay").style.display="none";
+    }
+    function setImage(image){
+        document.getElementById("image").value=image;
+        mediaClose();
+
+    }
+</script>
 </body>
 </html>
