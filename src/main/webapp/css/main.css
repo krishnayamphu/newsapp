@@ -89,3 +89,15 @@
     justify-content: center;
     align-items: center;
 }
+#postImage{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+}
+.post-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+}

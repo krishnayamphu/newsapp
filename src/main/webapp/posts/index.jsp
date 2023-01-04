@@ -19,7 +19,7 @@
         <tr>
             <td>${post.id}</td>
             <td>${post.title}</td>
-            <td>${post.categoryId}</td>
+            <td>${post.getCategory(post.categoryId)}</td>
             <td>${post.userId}</td>
             <td>${post.createdAt}</td>
             <td>${post.updatedAt}</td>
