@@ -6,43 +6,48 @@
     <title>Create Post</title>
 </head>
 <body>
-<form action="post-create" method="post">
-    <label>Title</label>
-    <input type="text" name="title" required>
-    <label>Content</label>
-    <textarea name="content" cols="30" rows="10"></textarea>
-    <label>Category</label>
-    <select name="category">
-        <c:forEach var="category" items="${categories}">
-            <option value="${category.id}">${category.name}</option>
-        </c:forEach>
-    </select>
-    <div class="post-media-group">
-        <label>Post Image</label>
-        <input type="hidden" name="image" id="image">
-        <div id="postImageWrap"></div>
-        <button type="button" onclick="mediaOpen()">Set Image</button>
-    </div>
-    <button>Create</button>
+<main>
+    <%@include file="../include/sidebar.jsp" %>
+    <div class="page-content">
+        <form action="post-create" method="post">
+            <label>Title</label>
+            <input type="text" name="title" required>
+            <label>Content</label>
+            <textarea name="content" cols="30" rows="10"></textarea>
+            <label>Category</label>
+            <select name="category">
+                <c:forEach var="category" items="${categories}">
+                    <option value="${category.id}">${category.name}</option>
+                </c:forEach>
+            </select>
+            <div class="post-media-group">
+                <label>Post Image</label>
+                <input type="hidden" name="image" id="image">
+                <div id="postImageWrap"></div>
+                <button type="button" onclick="mediaOpen()">Set Image</button>
+            </div>
+            <button>Create</button>
 
-    <div id="mediaOverlay" class="media-overlay">
-        <div class="media-container">
-            <button class="btn-close" type="button" onclick="mediaClose()"> X</button>
-            <c:forEach var="file" items="${files}">
-                <div class="media">
-                    <img onclick="setImage('${file}')" src="uploads/${file}" alt="">
-                    <div class="media-action">
-                        <a href="">View</a>
-                        <form action="media-del" method="post">
-                            <input type="hidden" name="image" value="${file}">
-                            <button>Delete</button>
-                        </form>
-                    </div>
+            <div id="mediaOverlay" class="media-overlay">
+                <div class="media-container">
+                    <button class="btn-close" type="button" onclick="mediaClose()"> X</button>
+                    <c:forEach var="file" items="${files}">
+                        <div class="media">
+                            <img onclick="setImage('${file}')" src="uploads/${file}" alt="">
+                            <div class="media-action">
+                                <a href="">View</a>
+                                <form action="media-del" method="post">
+                                    <input type="hidden" name="image" value="${file}">
+                                    <button>Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </c:forEach>
                 </div>
-            </c:forEach>
-        </div>
+            </div>
+        </form>
     </div>
-</form>
+</main>
 
 <script>
     function mediaOpen() {

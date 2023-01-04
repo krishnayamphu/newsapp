@@ -4,6 +4,10 @@
     <title>Register new user</title>
 </head>
 <body>
+<main>
+    <%@include file="../include/head.jsp"%>
+    <div class="page-content"></div>
+</main>
 <form action="register" method="post">
     <label>Username</label>
     <input type="text" name="username" required>

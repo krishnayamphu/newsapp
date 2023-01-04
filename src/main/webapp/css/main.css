@@ -5,6 +5,37 @@
     box-sizing: border-box;
 }
 
+main{
+    display: flex;
+    height: 100%;
+}
+.sidebar{
+    width: 200px;
+    background-color: #222424;
+    padding: 15px;
+}
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+}
+.sidebar nav hr{
+    border: none;
+    border-bottom: 1px solid #4c4c4c;
+}
+.sidebar form button{
+    padding: 3px 15px;
+    margin-top: 15px;
+}
+.page-content{
+    padding: 15px;
+    width: calc(100% - 200px);
+    background-color: #efefef;
+}
 
 
 /* media */
