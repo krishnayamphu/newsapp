@@ -9,11 +9,12 @@
 <main>
     <%@include file="../include/sidebar.jsp"%>
     <div class="page-content">
-        <form method="POST" enctype="multipart/form-data" action="media">
+        <form class="media-upload-form" method="POST" enctype="multipart/form-data" action="media">
             File to upload: <input type="file" name="upfile">
             <button>Upload</button>
         </form>
         <hr>
+        <br>
         <h3>All Media Files</h3>
         <div class="media-container">
             <c:forEach var="file" items="${files}">

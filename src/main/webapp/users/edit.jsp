@@ -8,6 +8,7 @@
 <main>
     <%@include file="../include/sidebar.jsp"%>
     <div class="page-content">
+        <h3>User Details</h3>
         <form action="user-edit" method="post">
             <input type="hidden" name="id" value="${user.id}">
             <label>Username</label>

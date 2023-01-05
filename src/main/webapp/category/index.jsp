@@ -9,6 +9,7 @@
 <main>
     <%@include file="../include/sidebar.jsp"%>
     <div class="page-content">
+        <h3>All Categories</h3>
         <table>
             <tr>
                 <th>Id</th>
@@ -26,7 +27,7 @@
                             <a href="category-edit?id=${category.id}">Edit</a>
                             <form action="category" method="post">
                                 <input type="hidden" name="id" value="${category.id}">
-                                <button>delete</button>
+                                <button>Delete</button>
                             </form>
                         </div>
                     </td>

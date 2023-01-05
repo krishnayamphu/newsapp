@@ -9,6 +9,7 @@
 <main>
     <%@include file="../include/sidebar.jsp" %>
     <div class="page-content">
+        <h3>New Post</h3>
         <form action="post-create" method="post">
             <label>Title</label>
             <input type="text" name="title" required>

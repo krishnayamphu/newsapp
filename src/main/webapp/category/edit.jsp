@@ -8,6 +8,7 @@
 <main>
     <%@include file="../include/sidebar.jsp"%>
     <div class="page-content">
+        <h3>Category Details</h3>
         <form action="category-edit" method="post">
             <input type="hidden" name="id" value="${category.id}">
             <label>Name</label>

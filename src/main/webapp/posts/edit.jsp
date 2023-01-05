@@ -9,6 +9,7 @@
 <main>
     <%@include file="../include/sidebar.jsp" %>
     <div class="page-content">
+        <h3>Post Details</h3>
         <form action="post-edit" method="post">
             <input type="hidden" name="id" value="${post.id}">
             <label>Title</label>

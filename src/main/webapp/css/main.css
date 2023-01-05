@@ -36,15 +36,92 @@ main{
     width: calc(100% - 200px);
     background-color: #efefef;
 }
+.page-content h3{
+    margin-bottom: 15px;
+}
+/* form */
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+form label, form input, form textarea, form select
+{
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+form label{
+    padding: 5px 0;
+}
+form option{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+form button{
+    width: 100px;
+    padding: 5px 10px;
+}
+.post-media-group{
+    display: flex;
+    flex-direction: column;
+}
+.post-media-group label{
+    padding: 10px 0;
+}
+.post-media-group button{
+    margin-bottom: 10px;
+}
+.media-upload-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+.media-upload-form input{
+    margin: 0 15px;
+    width: auto;
+}
 
+/* table */
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,table td{
+    border: 1px solid #cccccc;
+    padding: 15px;
+}
+table .action-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action-group form{
+    width: auto;
+}
+.action-group a{
+    text-decoration: none;
+    color: #222222;
+    font-size: 14px;
+    width: 100px;
+    padding: 5px 0;
+    text-align: center;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    margin-right: 10px;
+}
 
 /* media */
 .media-container{
     padding: 30px;
     display: flex;
     position: relative;
+    width: 98%;
     flex-wrap: wrap;
-    width: 80%;
     margin: 30px auto;
     background-color: white;
     border-radius: 5px;
@@ -82,6 +159,7 @@ main{
     background-color: #cccccc;
     padding: 5px;
 }
+
 .media-action a{
     text-decoration: none;
     font-size: 14px;
@@ -131,4 +209,12 @@ main{
     height: 100px;
     object-fit: cover;
     object-position: top;
+}
+#postImageWrap{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+#postImageWrap button{
+    margin-top: 10px;
 }

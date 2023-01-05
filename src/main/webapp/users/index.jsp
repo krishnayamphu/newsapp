@@ -9,6 +9,7 @@
 <main>
     <%@include file="../include/sidebar.jsp"%>
     <div class="page-content">
+        <h3>All Users</h3>
         <table>
             <tr>
                 <th>Id</th>
@@ -26,7 +27,7 @@
                             <a href="user-edit?id=${user.id}">Edit</a>
                             <form action="users" method="post">
                                 <input type="hidden" name="id" value="${user.id}">
-                                <button>delete</button>
+                                <button>Delete</button>
                             </form>
                         </div>
                     </td>
