@@ -4,7 +4,7 @@
 <html>
 <head>
     <%@include file="head.jsp"%>
-    <title>NewsApp | Homepage</title>
+    <title>NewsApp | Category</title>
 </head>
 <body>
 <%@include file="header.jsp"%>

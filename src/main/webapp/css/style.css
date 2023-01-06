@@ -80,6 +80,32 @@ nav ul li a:hover{
     padding: 10px;
 }
 
+.post-single{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.post-single .post-card{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.post-single .post-heading{
+    margin-bottom: 5px;
+    padding: 15px 0px;
+}
+.post-single .post-image{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+.post-single p{
+    padding: 15px 0;
+}
+
 
 .sidebar{
     width: 30%;
