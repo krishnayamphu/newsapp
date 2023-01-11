@@ -133,3 +133,27 @@ nav ul li a:hover{
     background-color: #cccccc;
     transition: all 0.5s ease;
 }
+.mt-3{
+    margin-top: 30px;
+}
+.quick-form{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.quick-form label{
+    padding: 5px 0;
+}
+.quick-form input{
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+.quick-form textarea{
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.quick-form button{
+    width: 100px;
+    text-align: center;
+    padding: 5px 0;
+}

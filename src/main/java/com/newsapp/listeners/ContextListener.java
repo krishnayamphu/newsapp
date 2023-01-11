@@ -11,6 +11,7 @@ public class ContextListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         Database.run();
+        new ContextPostListener(sce.getServletContext()).update();
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.newsapp.controllers.post;
 
 import com.newsapp.dao.CategoryDAO;
 import com.newsapp.dao.PostDAO;
+import com.newsapp.listeners.ContextPostListener;
 import com.newsapp.models.Category;
 import com.newsapp.models.Post;
 import com.newsapp.utils.MediaFile;
@@ -21,6 +22,7 @@ public class PostCreateController extends HttpServlet {
         ArrayList<String> files = MediaFile.getFiles(path);
         request.setAttribute("files", files);
         request.setAttribute("categories",categories);
+        new ContextPostListener(getServletContext()).update();
         request.getRequestDispatcher("posts/create.jsp").forward(request,response);
     }
 

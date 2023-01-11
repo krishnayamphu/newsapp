@@ -1,6 +1,7 @@
 package com.newsapp.controllers.post;
 
 import com.newsapp.dao.PostDAO;
+import com.newsapp.listeners.ContextPostListener;
 import com.newsapp.models.Post;
 
 import javax.servlet.*;
@@ -22,6 +23,7 @@ public class PostsController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         PostDAO.delete(id);
+        new ContextPostListener(getServletContext()).update();
         response.sendRedirect(request.getHeader("referer"));
     }
 }

@@ -1,11 +1,8 @@
 <div class="sidebar">
     <h3>Latest Updates:</h3>
     <ul>
-        <li><a href="">Latest update links</a></li>
-        <li><a href="">Latest update links</a></li>
-        <li><a href="">Latest update links</a></li>
-        <li><a href="">Latest update links</a></li>
-        <li><a href="">Latest update links</a></li>
-        <li><a href="">Latest update links</a></li>
+        <c:forEach var="post" items="${latestPosts}">
+            <li><a href="single?id=${post.id}">${post.title}</a></li>
+        </c:forEach>
     </ul>
 </div>
